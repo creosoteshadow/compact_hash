@@ -1,13 +1,13 @@
-compact_hash::CompactHash - Minimal, high-performance 64-bit non-cryptographic hash
+## compact_hash::CompactHash - Minimal, high-performance 64-bit non-cryptographic hash
 
-Features:
+## Features
     - Extremely compact and auditable (~100 lines, including comments)
     - wyhash-level speed and quality
     - 128 bit internal state for low collision rates
     - Streaming interface with optional seeding
     - Fully portable (MSVC, GCC, Clang on x86-64 and arm64)
 
-API:
+## API
     compact_hash h(seed = 0);
     h.insert(data, size);
     uint64_t hash = h.finalize();
@@ -19,7 +19,7 @@ API:
     std::vector<uint64_t> compact_hash_extended(
         const uint8_t* data, size_t size, size_t nWords, uint64_t seed = 0)l
 
-Usage examples:
+## Usage examples
 
     // Example 1 (streaming):
     compact_hash::CompactHash hasher(12345ULL);           // optional seed
@@ -34,7 +34,13 @@ Usage examples:
     auto hashes = compact_hash::compact_hash_extended(
     reinterpret_cast<const uint8_t*>(data), size, 4, 12345ULL);
 
+## Credit
 Based on wyhash (public domain) by Wang Yi: https://github.com/wangyi-fudan/wyhash
 
-This implementation is dedicated to the public domain (CC0 1.0) with an
-optional MIT license fallback. Use freely, no attribution required.
+## License
+
+This project is dedicated to the public domain under CC0 1.0 (see LICENSE).
+
+As an optional fallback for users who prefer an explicit license, it is also available under the MIT License (see LICENSE-MIT).
+
+You may choose to use the code under either CC0 1.0 **or** MIT — whichever better suits your needs. No attribution is required under either.
