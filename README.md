@@ -1,11 +1,14 @@
 ## compact_hash::CompactHash - Minimal, high-performance 64-bit non-cryptographic hash
 
 ## Features
-    - Extremely compact and auditable (~100 lines, including comments)
-    - Fast (estimated 8 GB/s), readable, and auditable (~100 lines) with wyhash-inspired quality and modern rrmxmx avalanche
-    - 128 bit internal state for low collision rates
-    - Streaming interface with optional seeding
-    - Fully portable (MSVC, GCC, Clang on x86-64 and arm64)
+
+- 100% header-only C++
+- Extremely compact and auditable (~100 lines including comments)
+- Fast (~8 GB/s on modern x86-64), highly readable, with wyhash-inspired quality and modern rrmxmx avalanche
+- 128-bit internal state for excellent collision resistance
+- Streaming interface with optional high-quality seeding (SplitMix64)
+- Extendable output for multiple independent hashes from one input
+- Fully portable across MSVC, GCC, and Clang on x86-64 and ARM64
 
 ## API
     compact_hash h(seed = 0);
