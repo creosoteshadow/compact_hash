@@ -44,7 +44,23 @@ Compression function based on wyhash (public domain) by Wang Yi: https://github.
 Finalization mixers inspired by xxHash (public domain) by Yann Collet.
 Reference: https://github.com/Cyan4973/xxHash/blob/dev/xxhash.h (search for rrmxmx or similar)
 
+## Related Reading / Inspirations
 
+- **wyhash** by Wang Yi – Core compression and overall structure inspired by this public-domain hash.  
+  https://github.com/wangyi-fudan/wyhash
+
+- **On the mixing functions in fast splittable pseudorandom number generators** (Pelle Evensen, 2018) – Origin of the rrmxmx avalanche mixer used in finalize(). Excellent analysis of strong 64-bit mixing.  
+  https://mostlymangling.blogspot.com/2018/07/on-mixing-functions-in-fast-splittable.html
+
+- **Better, stronger mixer and a test procedure** (Pelle Evensen, 2019) – Follow-up introducing even stronger variants (e.g., rrxmrrxmsx_0), later influencing XXH3.  
+  https://mostlymangling.blogspot.com/2019/01/better-stronger-mixer-and-test-procedure.html
+
+- **xxHash** by Yann Collet – Modern finalization ideas and high-performance design principles.  
+  https://github.com/Cyan4973/xxHash
+
+- **SplitMix64** by Sebastiano Vigna – The seeding/PRNG used for robust state initialization and extendable output.  
+  http://xoshiro.di.unimi.it/splitmix64.c
+  
 ## License
 
 This project is dedicated to the public domain under CC0 1.0 (see LICENSE).
