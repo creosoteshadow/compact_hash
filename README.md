@@ -35,7 +35,12 @@
     reinterpret_cast<const uint8_t*>(data), size, 4, 12345ULL);
 
 ## Credit
-Based on wyhash (public domain) by Wang Yi: https://github.com/wangyi-fudan/wyhash
+
+Compression function based on wyhash (public domain) by Wang Yi: https://github.com/wangyi-fudan/wyhash
+
+Finalization mixers inspired by xxHash (public domain) by Yann Collet.
+Reference: https://github.com/Cyan4973/xxHash/blob/dev/xxhash.h (search for rrmxmx or similar)
+
 
 ## License
 
