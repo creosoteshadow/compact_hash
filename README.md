@@ -2,7 +2,7 @@
 
 ## Features
     - Extremely compact and auditable (~100 lines, including comments)
-    - wyhash-level speed and quality
+    - Fast (estimated 8 GB/s), readable, and auditable (~100 lines) with wyhash-inspired quality and modern rrmxmx avalanche
     - 128 bit internal state for low collision rates
     - Streaming interface with optional seeding
     - Fully portable (MSVC, GCC, Clang on x86-64 and arm64)
